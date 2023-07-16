@@ -1,0 +1,27 @@
+{
+    "authors": [
+        "Alexander Zhirov"
+    ],
+    "copyright": "Copyright © 2023, Alexander Zhirov",
+    "homepage": "https://git.zhirov.kz/dlang/dgtl.git",
+    "description": "D Google Translate Library",
+    "license": "GPL-2.0",
+    "name": "dgtl",
+    "configurations": [
+        {
+            "name": "library",
+            "targetType": "library",
+            "targetPath": "lib",
+            "sourceFiles": ["source/dgtl.d"]
+        },
+        {
+            "name": "unittest",
+            "targetPath": "bin",
+            "importPaths": ["source","tests"],
+            "sourcePaths": ["tests"],
+            "dependencies": {
+                "silly": "~>1.2.0-dev.2"
+            }
+        }
+    ]
+}
